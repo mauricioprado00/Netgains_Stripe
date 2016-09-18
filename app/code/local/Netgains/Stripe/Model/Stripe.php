@@ -117,7 +117,7 @@ class Netgains_Stripe_Model_Stripe extends Mage_Payment_Model_Method_Cc
 
 			// Add the comment and save the order
 		}
-		if($errorMsg){
+		if(isset($errorMsg) && $errorMsg){
 			Mage::throwException($errorMsg);
 		}
 
